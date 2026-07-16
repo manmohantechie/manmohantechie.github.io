@@ -1,10 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Test</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manmohan Mishra — Senior Backend Engineer</title>
+<meta name="description" content="Manmohan Mishra — Senior Backend Engineer. Python, distributed systems, AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#0F0F10;
+    --ink:#F2F0EA;
+    --ink-soft:#9A9A9F;
+    --line:#2A2A2D;
+    --coral:#3FD4C4;
+    --indigo:#3FD4C4;
+    --moss:#3FD4C4;
+    --gold:#F2A93E;
+    --mono:'IBM Plex Mono',monospace;
+    --display:'Space Grotesk',sans-serif;
+    --sans:'Inter',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.55;
+  }
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:580px;margin:0 auto;padding:0 24px;}
+
+  header{
+    padding:22px 0;
+    display:flex;justify-content:space-between;align-items:center;
+    font-family:var(--mono);font-size:12.5px;color:var(--ink-soft);
+  }
+  nav{display:flex;gap:18px;}
+  nav a:hover{color:var(--coral);}
+
+  .intro{padding:1px 0 40px;position:relative;}
+  .intro::before{
+    content:"";position:absolute;top:0;left:-24px;width:5px;height:72px;
+    background:linear-gradient(180deg,var(--coral),var(--gold) 50%,var(--indigo));
+    border-radius:3px;
+  }
+  h1{
+    font-family:var(--display);font-weight:700;
+    font-size:clamp(28px,5vw,36px);
+    letter-spacing:-.01em;margin-bottom:10px;
+    background:linear-gradient(90deg,var(--ink) 60%,var(--indigo));
+    -webkit-background-clip:text;background-clip:text;
+  }
+  .role-line{
+    font-size:15px;color:var(--ink-soft);margin-bottom:18px;
+  }
+  .links{display:flex;gap:16px;flex-wrap:wrap;}
+  .links a{
+    font-family:var(--mono);font-size:12.5px;color:var(--indigo);
+    border-bottom:1.5px solid var(--indigo);padding-bottom:2px;
+  }
+  .links a:hover{color:var(--coral);border-color:var(--coral);}
+
+  .section-head{
+    font-family:var(--mono);font-size:11.5px;color:var(--coral);
+    text-transform:uppercase;letter-spacing:.06em;font-weight:500;
+    margin:44px 0 16px;
+    padding-bottom:6px;border-bottom:2px solid var(--coral);
+    display:inline-block;
+  }
+
+  .entry{
+    display:grid;
+    grid-template-columns:40px 74px 1fr;
+    gap:14px;
+    padding:16px 0;
+    border-top:1px solid var(--line);
+    align-items:start;
+  }
+  .entry:first-of-type{border-top:none;}
+  .logo{
+    width:40px;height:40px;border-radius:9px;
+    background:#fff;
+    border:1.5px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+    overflow:hidden;flex-shrink:0;
+    box-shadow:0 2px 6px rgba(0,0,0,0.06);
+  }
+  .logo img{width:100%;height:100%;object-fit:contain;padding:6px;}
+  .logo .fallback{
+    font-family:var(--display);font-weight:700;font-size:14px;color:var(--indigo);
+  }
+  .entry-date{
+    font-family:var(--mono);font-size:11px;color:var(--ink-soft);
+    padding-top:4px;
+  }
+  .entry-title{
+    font-family:var(--display);font-weight:600;font-size:15.5px;
+  }
+  .entry-company{font-size:13.5px;color:var(--indigo);font-weight:500;}
+  .entry-note{font-size:13.5px;color:var(--ink-soft);margin-top:4px;}
+
+  .project-entry{
+    display:grid;grid-template-columns:40px 1fr;gap:14px;
+    padding:14px 0;border-top:1px solid var(--line);align-items:start;
+  }
+  .project-entry:first-of-type{border-top:none;}
+  .project-dot{
+    width:40px;height:40px;border-radius:9px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .project-title{font-family:var(--display);font-weight:600;font-size:15.5px;}
+  .project-title a{color:var(--coral);font-family:var(--mono);font-size:11.5px;font-weight:400;margin-left:8px;}
+  .project-note{font-size:13.5px;color:var(--ink-soft);margin-top:3px;}
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:26px 0 48px;margin-top:12px;
+    font-family:var(--mono);font-size:12px;color:var(--ink-soft);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
+  }
+
+  @media (max-width:480px){
+    .entry{grid-template-columns:36px 1fr;}
+    .entry-date{grid-column:1 / -1;order:-1;padding-top:0;}
+  }
+</style>
 </head>
 <body>
+
+<header>
+  <div class="wrap" style="display:flex;justify-content:space-between;width:100%;">
+    <span>#</span>
+    <nav>
+      <a href="/index.html">Home</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+    <section id="articles">
+  <div class="section-head">Articles</div>
+
+  <div class="project-entry">
+    <div class="project-dot">
+      <span style="font-family:var(--display);font-weight:700;">01</span>
+    </div>
+    <div>
+      <div class="project-title">
+        When Event-Driven Isn’t Enough: Eliminating Duplicate Processing in AWS Glue
+        <a href="https://medium.com/@manmohan.techie/when-event-driven-isnt-enough-eliminating-duplicate-processing-in-aws-glue-8d30e4a04883"
+           target="_blank"
+           rel="noopener">
+          read ↗
+        </a>
+      </div>
+      <div class="project-note">
+        How a race condition between S3, Lambda, and Glue taught us that “event-driven” and “exactly-once” are not the same promise.
+      </div>
+    </div>
+  </div>
+
+</section>
+
+  <footer id="contact">
+    <span>© 2026 Manmohan Mishra</span>
+    <span>manmohan.techie@gmail.com</span>
+  </footer>
+
+</div>
 
 </body>
 </html>
